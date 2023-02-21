@@ -16,3 +16,10 @@ my_variable.upper()
 'any string'.upper()
 'RANDOM STRING'.lower()
 'nastasia'.upper()
+classes = ['intro to python', 'edu tech', 'data viz', 'digital story']
+classes.append('env tech')
+classes
+classes.remove('data viz')
+classes
+
+
