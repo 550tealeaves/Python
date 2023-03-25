@@ -241,5 +241,85 @@ description = f"a book by {author}"
 print(f"A Room of one's own is {description}") # A room of one's own is a book by Virgina Wolf
 
 
+# check is there is a duplicate - email has been used before
+email = "johnsmith@gmail.com"
+is_duplicate = True
 
+if is_duplicate:
+    print(f'{email} is already in use')
+
+# is_morning will skip the code block b/c it's FALSE
+is_morning = False
+is_evening = True
+
+if is_morning:
+    print('Good morning, Alex!')
+
+
+
+# LOOPS
+# SELF-ASSIGNING OPERATORS
+wallet = 3
+print(wallet)
+
+# Self-assignment - setting variable to its own value
+wallet = wallet
+print(wallet)
+
+# B/c you can self-assign variables, you can increase/decrease variables set to #s
+wallet = 3
+wallet = wallet + 1
+print(wallet) # answer is 4
+
+# Self-assigning variables let you track changes over time
+wallet = 3
+wallet = wallet + 2 # answer is 5
+wallet = wallet - 1 # answer is 4
+print(wallet) #output = 4
+
+# Self-assigning lets you track changes in strings too
+name = "Account name: "
+name = name + " Elton" #output = Account name: Elton
+name = name + " John" #output = Account name: Elton John
+print(name) #output = Account name: Elton John
+
+name = "Joanne"
+name = name + " Rowling"
+print(name) #output = Joanne Rowling
+
+
+cards = 3
+cards = cards - 1
+cards = cards + 4
+print(cards) #output = 6
+
+name = "Jennifer"
+name = name + " Lopez"
+print(name) #Jennifer Lopez
+
+# Instead of re-writing variable name, can use += to add # to increase variable
+sales = 5
+sales += 1
+print(sales) #output = 6
+
+marbles = 6
+marbles += 2 
+print(marbles) #8
+
+yards = 80
+yards += 10
+print(yards) # 90
+
+# Use -= to decrease variable 
+sales = 5
+sales -= 3
+print(sales) #output = 2
+
+speed = 200
+speed -= 1
+print(speed) #199
+
+account = 1000
+account -= 200
+print(account) #800
 
