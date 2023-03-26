@@ -324,43 +324,82 @@ account -= 200
 print(account) #800
 
 
-# WHILE LOOPS
-# programs repeat same lines of code over tob build things
+# Controlling While Loops
+# 1. Start w/ variable set to # = "counter variable"
+# Counter variable counts # times loop repeats 
 
-# How to repeat code?
-# 1. Write the code over - time-consuming
-print("and again")
-print('and again')
-print('and again')
+counter = 1
 
-# To build bigger programs/sites, repeat code lines using WHILE LOOP
-while True:  #will repeat it ad-infinitum
-    print('and again')
+# 2. Use comparison in the condition to compare coutner variable to a #
+counter = 1
+while counter < 4:
+
+# 3. Inside code block, make condition return FALSE & stop loop by incrementing counter variable
+# increases counter by 1 each time loop runs code block 
+counter = 1
+
+while counter < 4:  # will print out "1" 3x
+    print(counter)
+    counter += 1  #output = 123 b/c counter increments by 1 and stops loop
+
+counter = 1
+
+while counter < 10: # will print out "1" 9x
+    print(counter) #if you stop here, repeats 1 ad-infinitum
+    counter += 1 #output = 1-9 b/c counter increments by 1 - stops loop
+
+# Changing counter variable's value changes WHEN loop starts
+counter = 5 
+
+while counter < 10: # will start at "5" and repeat it 5 more times
+    print(counter) #if you stop here - it will repeat 5 ad-infinitum
+    counter += 1 #output = 5,6,7,8,9 b/c it increments and stops at 10
+
+# Code order affects what console shows
+# place counter += 1 first to show 6-10
+counter = 5 # counter starts at 5
+
+while counter < 10:
+    counter += 1
+    print(counter) #output = 6,7,8,9,10 - stops at 10
+
+counter = 1
+
+while counter < 5:
+    print(counter)
+    counter += 1 #output = 1,2,3,4 - stops at 4
+ 
+speed = 2  # counter variable starts at 2
+
+while speed < 5:
+    print(speed)
+    speed += 1 #output = 2,3,4 - stops at 4
+
+# Use counter variable to control loops w/ strings 
+list_number = 1 #counter starts at 1
+
+while list_number < 11:
+    print('Add entry...') # will output "Add entry"
+    list_number += 1 # stops Add entry... after 10 repeats
+
+releases = 1 #counter starts at 1
+while releases < 8:
+    print(releases)
+    releases += 1 #output = 1,2,3,4,5,6,7 - stops at 7
 
 
-# WHILE LOOP repeats code block while condition is TRUE
-# If while loop condition stays True = infinite loop 
-# will not run if FALSE
-while False:
-    print('skip me')
+# if counter increment is BEFORE print function - output shows the end # & omits starting
+# counter = 3 - while counter <8 = results 4,5,6,7,8 (includes 8, excludes 3)
+counter = 3 #counter starts at 3
 
-# To stop a while loop, create a variable OUTSIDE of the loop
-# set the same variable (inside same code block) to False to break the while loop
+while counter < 8:
+    counter += 1
+    print(counter) #output = 4,5,6,7,8 - stops at 8
 
-keep_going = True
-while keep_going == True:
-    print('once more')
-    keep_going = False
 
-keep_going = True
-while keep_going == True:
-    print('and again')
+# if counter increment is AFTER print function - output includes starting # & omits ending - counter = 3, while counter < 8 - output = 3,4,5,6,7 (includes 3, omits 8)
+counter = 3 #counter starts at 3
 
-    keep_going = False
-    
-    print('one more time')
-
-auto_pilot = False
-while auto_pilot == True:
-    print('Autopilot on: vroom!')
-    auto_pilot = False
+while counter < 8:
+    print(counter) 
+    counter += 1 #output = 3,4,5,6,7 - stops at 7
