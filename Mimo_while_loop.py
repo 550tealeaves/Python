@@ -1,5 +1,5 @@
 # WHILE LOOPS
-# programs repeat same lines of code over tob build things
+# programs repeat same lines of code over to build things
 
 # How to repeat code?
 # 1. Write the code over - time-consuming
