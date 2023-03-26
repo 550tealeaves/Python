@@ -324,7 +324,7 @@ account -= 200
 print(account) #800
 
 
-# Controlling While Loops
+# CONTROLLING WHILE LOOPS
 # 1. Start w/ variable set to # = "counter variable"
 # Counter variable counts # times loop repeats 
 
@@ -403,3 +403,64 @@ counter = 3 #counter starts at 3
 while counter < 8:
     print(counter) 
     counter += 1 #output = 3,4,5,6,7 - stops at 7
+
+# Show picutre of flag
+first_counter = 0
+
+while first_counter < 5:
+    print('**********---------')
+    first_counter += 1
+
+second_counter = 0
+
+while second_counter < 4:
+    print('------------------')
+    second_counter += 1
+
+
+# FOR LOOPS
+# Use for loops to write programs w/ less code 
+# Use for i (variable) in range():
+for i in range(4): # for in this loop repeat below 4x
+    print("**********---------")
+for i in range(4): # for in this loop repeat below 4x
+    print("------------------")
+
+
+for i in range(5):
+    print('Happy birthday to you!') #will repeat statement 5x
+
+
+# add # inside range, like 6, = loop over code block 6x, from 0-5
+for i in range(6):
+    print(i) #output = 0,1,2,3,4,5 (6x)
+
+# variable "i" = counter variable - counts what repetition of loop we're in
+for i in range(3):
+    print(i) #output = 0,1,2
+    print('For loops are great!') #prints string 3x
+
+
+for i in range(2): # i = counter variable - 0,1
+    print('We will') # prints string 2x
+print('Rock you!') #outside code block - EXCLUDED from for loop - runs 1x
+
+
+print('Everybody wants to') #prints 1x b/c not attached to loop
+
+for i in range(3): #counter variable = 0,1,2
+    print('be like me') # print string 3x
+
+
+for i in range(2):
+    print('Accessing GDP values')
+
+
+for x in range(5): # x = counter variable - 0,1,2,3,4
+    print("Round:") # prints Round: 5x
+    print(x) #prints 0,1,2,3,4
+
+
+for i in range(3): #i = cv - 0,1,2
+    print('Adding entries...') # prints string 3x
+print('All entries added') #outside code block = runs 1x
