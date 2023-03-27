@@ -463,4 +463,4 @@ for x in range(5): # x = counter variable - 0,1,2,3,4
 
 for i in range(3): #i = cv - 0,1,2
     print('Adding entries...') # prints string 3x
-print('All entries added') #outside code block = runs 1x
+print('All entries added') #outside code block = runs 1x only
