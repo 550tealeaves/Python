@@ -165,10 +165,10 @@ is_weekend = False
 on_vacation = True
 
 if is_weekend or on_vacation:
-    print("Go on a roadtrip")
+    print("Go on a road trip")
 
 
-# OR will not run b/c both coditions are FALSE
+# OR will not run b/c both conditions are FALSE
 mobile_internet = False
 wifi = False
 
@@ -238,7 +238,7 @@ print(f'{planet} has {moons} moons and {rings} rings') #Jupiter has 70 moons & 4
 #USE VARIABLES W/IN OTHER VARIABLES IN F-STRINGS
 author = "Virginia Wolf"
 description = f"a book by {author}"
-print(f"A Room of one's own is {description}") # A room of one's own is a book by Virgina Wolf
+print(f"A Room of one's own is {description}") # A room of one's own is a book by Virginia Wolf
 
 
 # check is there is a duplicate - email has been used before
@@ -310,6 +310,15 @@ yards = 80
 yards += 10
 print(yards) # 90
 
+# += also works to join strings
+title = "Dr."
+title += " Jane Doe"
+print(title) # prints Dr. Jane Doe
+
+title1 = "Dr."
+title1 = title1 + " Jane Doe"
+print(title1) # second way to join strings - prints Dr. Jane Doe
+
 # Use -= to decrease variable 
 sales = 5
 sales -= 3
@@ -330,9 +339,9 @@ print(account) #800
 
 counter = 1
 
-# 2. Use comparison in the condition to compare coutner variable to a #
+# 2. Use comparison in the condition to compare counter variable to a #
 counter = 1
-while counter < 4:
+    while counter < 4:
 
 # 3. Inside code block, make condition return FALSE & stop loop by incrementing counter variable
 # increases counter by 1 each time loop runs code block 
@@ -404,7 +413,7 @@ while counter < 8:
     print(counter) 
     counter += 1 #output = 3,4,5,6,7 - stops at 7
 
-# Show picutre of flag
+# Show picture of flag
 first_counter = 0
 
 while first_counter < 5:
@@ -464,3 +473,50 @@ for x in range(5): # x = counter variable - 0,1,2,3,4
 for i in range(3): #i = cv - 0,1,2
     print('Adding entries...') # prints string 3x
 print('All entries added') #outside code block = runs 1x only
+
+# inside for loop's code block, add ~ to the line variable by using the += operator
+print("*")
+line = ""
+for i in range(4):
+    line += "~"
+    print(line) # prints 1 line ~, 2nd line ~~, 3rd line ~~~, 4th = ~~~~
+
+
+# counter variable can be named "counter", "i", or anything else
+print ("Zero to four:")
+for repetition in range(5): # counter var = repetition
+    print(repetition) # prints 0,1,2,3,4 (5 #s)
+
+for i in range(3):
+    print("Polly wants a cracker!") #will print statement 3x 
+
+
+year = 2020
+while year <= 2025: #year = counter var
+    print(f"It's {year}") # prints statement but with increase year
+    year += 1 #will print out It's 2020, "" 2021, "" 2022, "" 2023, "" 2024, "" 2025
+
+
+year = 2025
+while year <= 2100:
+    print(f"It's {year}")
+    year += 5 # prints all years in 5-yr increments from 2025 to 2100 w/ statement
+
+# have to know what outputs will be
+i = 0  # i assigned value of 0
+while i < 10: # value of i will always be less than 10
+    i += 1 # i reassigned to 0 (initial assignment) + 1  = 0+1 = 1
+    print(i) # prints 1-10
+
+i = 0  # i assigned value of 0
+while i < 10:  # value of i will always be less than 10
+    print(i)
+    break
+
+for i in range(3):
+    print("Polly wants a cracker!")  # will print statement 3x
+
+counter = 1
+while counter < 5:
+    counter +=1
+    print(counter)
