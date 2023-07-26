@@ -341,7 +341,8 @@ counter = 1
 
 # 2. Use comparison in the condition to compare counter variable to a #
 counter = 1
-    while counter < 4:
+
+while counter < 4:
 
 # 3. Inside code block, make condition return FALSE & stop loop by incrementing counter variable
 # increases counter by 1 each time loop runs code block 
