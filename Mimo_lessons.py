@@ -521,3 +521,43 @@ counter = 1
 while counter < 5:
     counter +=1
     print(counter)
+
+
+#inventory program - sales should increase by 1 & inventory should decrease by 1
+sales = 0
+inventory = 10
+
+sales += 1
+inventory -= 1
+
+print(f'Sales: {sales}') # 1
+print(f'Inventory: {inventory}') # 9
+
+evens = 0
+while evens < 10:
+    evens += 2 ## stops infinite loop by incrementing variable
+    print(evens)
+
+counter = 1
+while counter < 5:
+    print(counter)
+    counter += 1 # prints 1,2,3,4
+
+#Display 1-7 in console
+days = 0
+
+while days < 7:
+    days += 1 #first value will be 0+1 = 1
+    print(days) # prints 1,2,3,4,5,6,7
+
+
+# Code program that reminds us 3x to stop the bot.
+reminder_count = 0
+
+while reminder_count < 3:
+    print("Reminder: Stop the bot!")
+    reminder_count += 1 #prints the above statement 3x
+
+loop = False # loop is assigned false - if assigned true then activates loop
+while loop:  # while false 
+    print('Entered the loop!') # will print it 1x - if loop = true then infinite repeats
