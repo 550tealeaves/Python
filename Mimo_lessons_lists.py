@@ -56,3 +56,46 @@ print(items) # 'milk', 'tomato', "apple"
 print (items[1]) # 'tomato'
 items[1] = 'cheese'
 print(items) # "milk", "cheese", "apple"
+
+# UPDATING LISTS
+# To add value to list, code the list_name.append('new-value')
+scores = [24, 23]
+scores.append(25) # adds 25 to list
+print(scores) # new list puts 25 at the last index position
+
+users = ["john", "hannah", "marco"]
+users.append("julian")
+print(users) # print "john", "hannah", "marco", "julian"
+
+# To add new value to a SPECIFIC INDEX, use insert()
+# index() has 2 parameters: 1st = index, 2nd = value
+shopping = ["kiwis", "peas"]
+shopping.insert(0, "lemon") # will add "lemon" at 0 index position (1st)
+print(shopping) # prints "lemon", "kiwis", "peas"
+
+shopping = ['kiwis', 'peas']
+shopping.insert(0, 'lemon')  # will add "lemon" at 0 index position (1st)
+shopping.insert(1, 'chocolate') # adds 'chocolate' at 1 index position (2nd) 
+print(shopping) # 'lemon', 'chocolate', 'kiwis', "peas"
+
+# Can only add 1 element at a time for .append() and .insert()
+initials = ["RM", "LP"]
+initials.append("LC") # adds "LC" to the end of the list
+initials.insert(1, "LS") # adds "LS" at 1st index position (2nd spot)
+print(initials) # "RM", "LS", "LP", "LC"
+
+
+# To remove the last element in list, add list_name.pop()
+todo = ["call mom", "dishes"]
+todo.pop() #removes last element in list
+print(todo) #call mom
+
+# To remove a value AT SPECIFIC INDEX VALUE, add index to .pop()
+todo = ["call mom", "dishes", "painting"]
+todo.pop(1) #removes item at 1st index position (2nd item)
+print(todo) # "call mom", "painting"
+
+# Can store the removed value and print it
+todo = ["call mom", "dishes", "painting"]
+removed = todo.pop(0) # remove "call mom" and store assign it variable removed
+print(removed) #prints "call mom"
