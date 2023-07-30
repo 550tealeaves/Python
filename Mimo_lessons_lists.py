@@ -99,3 +99,98 @@ print(todo) # "call mom", "painting"
 todo = ["call mom", "dishes", "painting"]
 removed = todo.pop(0) # remove "call mom" and store assign it variable removed
 print(removed) #prints "call mom"
+
+# Organizing data
+themes = ['classic', 'dark mode']
+print(themes)
+
+players = ['Federer', 'Murray']
+print('Players for the match:')
+print(players)
+
+# Can include variables as elements in list
+first = 'John'
+second = 'Joseph'
+third = 'Donnie'
+winners = [first, second, third]
+print(winners) # prints 'John', 'Joseph', 'Donnie'
+print(winners[2]) #will print 'Donnie'
+
+
+flavors = ['vanilla', 'chocolate', 'pistachio']
+flavors[2] = 'strawberry'
+print(flavors)
+
+
+trading_values = [1,2]
+trading_values.append(3) #adds 3 as the last element in list
+print(trading_values) # 1,2,3
+
+forecast = ['sunny', 'cloudy']
+forecast.insert(0, 'windy') #will add 'windy' as first element in list
+print(forecast) # 'windy', 'sunny', 'cloudy'
+
+
+quiz_answers = [False, False, True, False]
+print(quiz_answers) # False, False, True, False
+quiz_answers.pop() # removes last item in list
+print(quiz_answers) # False, False, True
+
+
+# LOOPING OVER LISTS
+# Use 'for' to loop over lists
+# Console prints results vertically with no commas
+# 1
+# 2
+final_scores = [17, 22, 34, 13]
+for score in final_scores: # loop through using for & another variable name & :
+    print(score) # prints 17,22,34,13
+
+
+# The loop runs for as many elements as there are in the list
+
+# The variable before 'in' holds value of the list element the loop is currently on
+artists = ['Chagall', 'Lissitzky']
+for artist in artists:
+    print(artist) #prints 1st artist name, then prints 2nd artist name
+    print("---") # prints ---, then prints again after 2nd artist name
+
+
+student_grades = ['A', 'A-', 'C']
+for grade in student_grades: 
+    print(grade) # A A- C
+
+
+singers = ['Bowie', 'Freddie']
+for singer in singers:
+    print(singer) # this should match the variable before in 
+    print("is a legendary rocker")
+
+
+consoles = ['Playstation', 'Xbox']
+for console in consoles:
+    print(console) # Playstation Xbox 
+
+
+items = ['milk', 'tomato', 'apple']
+for item in items:
+    print(item) # milk tomato apple
+
+
+supplies = ['pencil', 'book']
+for value in supplies:
+    print(value) # must be the same as variable before in - pencil book
+
+
+
+# Can add or subtract from elements in list
+data_points = [99, 99, 99, 99]
+for data in data_points:
+    print(data + 1) # adds 1 to each element in list = 100 100 100 100
+
+
+minutes_worked = [123, 100, 99, 67]
+for minutes in minutes_worked:
+    print(minutes - 60) # subtracts 60 from each element in list = 63, 40, 39, 7
+
+
