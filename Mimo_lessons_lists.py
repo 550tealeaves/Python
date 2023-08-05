@@ -197,3 +197,60 @@ for minutes in minutes_worked:
 cubist_painters = ["Kahlo", "Chagall", "Dali"]
 print("Below are some Cubist painters")
 print(cubist_painters)
+
+genres = ['comedy', 'fantasy']
+genres.append('mystery') # adds "mystery" to the end of the above list
+print(genres) # "comedy", "fantasy", "mystery"
+
+players = ['Meg', 'Max', 'Lucas']
+players.append("Sue") #adds "Sue" to the end of the above list
+print(players) # "Meg", "Max", "Lucas", "Sue"
+
+devices = ['iPhone X', 'iPhone 8', 'Galaxy s8']
+devices.pop() #will remove the last element of the list
+print(devices) # 'iPhone X', 'iPhone 8'
+
+# STORE LIST ADDITIONS/SUBTRACTIONS INTO NEW VARIABLES
+pace = [4.5, 4, 5, 5.2]
+print(pace) # 4.5, 4, 5, 5.2
+best = pace.pop() # remove the last element (5.2) and assign element to new var 'best'
+print(best) # 5.2
+
+
+accept_cookies = [True, False]
+answer = accept_cookies.pop() # removes last element (False) & assigns element to new var 'answer'
+print(answer) # False
+
+
+#INSERTIONS
+transactions = [-100, 500]
+transactions.insert(1, 5) # insert 5 at the 1st index position
+print(transactions) # -100, 5, 500
+
+destinations = ["New York", "Paris"]
+destinations.insert(0, "Tokyo") # insert "Tokyo" into index 0 position
+print(destinations) # "Tokyo", "New York", "Paris"
+
+
+#DECIDING THE LISTS
+# CAN COUNT ELEMENTS IN LIST AND USE THEM W/ IF STATEMENTS
+# USE LEN() W/ LIST NAME INSIDE () - LEN(LIST_NAME) TO COUNT # OF ELEMENTS
+users = ['Sarah', 'Mike', 'Ella']
+print(len(users)) # 3
+
+
+# CAN STORE LENGTH OF LIST IN VARIABLE
+users = ['Sarah', 'Mike', 'Ella']
+number_of_users = len(users) #stores length in new variable 
+print(number_of_users) # 3
+
+# USE LEN() IN EMPTY LIST = 0
+users = [] # empty list
+number_of_users = len(users) # stores length of users list in new var
+print(number_of_users) # 0
+
+
+# CAN USE LIST LENGTH TO CREATE CONDITIONAL STATEMENTS BASED ON # ELEMENTS 
+tasks = ['dishes', 'windows', 'vacuum']
+if len(tasks) > 0:  #if # elements in 'tasks' list > 0, then print below statement
+    print('Ugh, more work!') # will print this b/c meets conditional
