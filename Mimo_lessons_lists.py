@@ -194,3 +194,6 @@ for minutes in minutes_worked:
     print(minutes - 60) # subtracts 60 from each element in list = 63, 40, 39, 7
 
 
+cubist_painters = ["Kahlo", "Chagall", "Dali"]
+print("Below are some Cubist painters")
+print(cubist_painters)
