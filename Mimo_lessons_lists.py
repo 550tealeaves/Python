@@ -239,6 +239,14 @@ users = ['Sarah', 'Mike', 'Ella']
 print(len(users)) # 3
 
 
+subway_lines =  ['A', 'B', 'C', 'D', 1, 2, 3, 4]
+print(len(subway_lines)) # 8
+
+
+desserts = ['tiramisu', 'cheesecake', 'ice-cream', 'apple pie', 'bread pudding']
+print(len(desserts)) # 5
+
+
 # CAN STORE LENGTH OF LIST IN VARIABLE
 users = ['Sarah', 'Mike', 'Ella']
 number_of_users = len(users) #stores length in new variable 
@@ -254,3 +262,17 @@ print(number_of_users) # 0
 tasks = ['dishes', 'windows', 'vacuum']
 if len(tasks) > 0:  #if # elements in 'tasks' list > 0, then print below statement
     print('Ugh, more work!') # will print this b/c meets conditional
+
+if len(tasks) < 1:  # if # elements in 'tasks' list < 1, then print below statement
+    print('Ugh, more work!') # doesn't print b/c does not meet conditional 
+
+
+ingredients = ['lemon', 'cream']
+if len(ingredients) > 10: 
+    print('Bring a bag!') # won't print b/c len not > 10
+
+
+
+
+
+
