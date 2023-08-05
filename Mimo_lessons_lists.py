@@ -272,7 +272,97 @@ if len(ingredients) > 10:
     print('Bring a bag!') # won't print b/c len not > 10
 
 
+# LOOPS AND LISTS - USE FOR LOOP TO LOOP THROUGH LIST
+student_grades = ['F', 'A+', 'A-', 'C']
+
+for grade in student_grades:
+    print(grade) #prints out F, A+, A-, C (like in a col)
+
+
+update_version = [1.2, 3.5, 2]
+
+for version in update_version: 
+    print(version + 1) #adds 1 to each element - 2.2, 4.5, 3
+
+
+consoles = ['Xbox', 'Playstation', 'Nintendo']
+
+for console in consoles:
+    print(console) # Xbox Playstation Nintendo
+
+
+singers = ['Elton', 'Freddie', 'Elvis']
+
+for singer in singers:
+    print(singer) # Elton Freddie Elvis
+
+supplies = ['pencil', 'book']
+
+for value in supplies:
+    print(value) # pencil, book
 
 
 
+sodas = ['coke', 'fanta']
+if len(sodas) > 3:
+    print("Too much soda!") # won't print anything b/c doesn't meet conditional
 
+
+wall_length = [5, 7, 11]
+print(len(wall_length)) #3
+
+
+sports = ['basketball', 'soccer']
+for sport in sports:
+    print(sport) # basketball soccer
+
+
+lock_combination = [9, 4, 7, 15]
+print(len(lock_combination)) # 4
+
+
+destinations = ['Germany', 'Italy', 'Austria', 'Spain', 'France']
+print(len(destinations)) #5
+
+
+cart = ['milk', 'tomato', 'scallions', 'apple', 'mushrooms', 'tofu', 'honey']
+items = len(cart) #takes # of elements and assigns it new var 'items'
+print(items) #7
+
+
+candidates = ['Michael']
+candidates_number = len(candidates) # assigns # elements to new var 'candidates_number'
+
+if candidates_number < 2:
+    print("A candidate needs opposition") #will print this statement b/c meets conditional
+
+
+temperatures = [40, 32, 32, 38] #list w/ 4 elements
+temperatures = [] # var reassigned to empty list
+
+tracked_days = len(temperatures) #stores # of elements (0) in new var 'tracked_days'
+print(tracked_days) #0
+
+
+match = ['Federer', 'Murray']
+opponents = len(match) #assigns #of elements in 'match' list to new var 'opponents'
+
+if opponents >= 2:
+    print("Game on!") #will display 'Game on' b/c meets the conditional
+
+
+#CODING CHALLENGE #1
+#Create menu using Python
+#Create a list w/ meals for breakfast, lunch, and dinner using 'omelet', 'salad', & 'chicken', respectively
+#After 1st print statement to include the lunch menu
+#Change meals list dinner value to 'pizza'
+#Alter 2nd print statement to include current dinner menu item
+meals = ['omelet', 'salad', 'chicken'] #initial list w/ breakfast, lunch, & dinner values
+
+print(f'Breakfast menu: {meals[0]}') #Breakfast menu: omelet
+
+print(f'Lunch menu: {meals[1]}') #Lunch menu: salad
+
+meals[2] = 'pizza' #reassigns element @ 2nd index position to pizza
+
+print(f'Dinner menu: {meals[2]}') #Dinner menu: pizza
