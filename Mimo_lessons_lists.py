@@ -291,10 +291,12 @@ for console in consoles:
     print(console) # Xbox Playstation Nintendo
 
 
+
 singers = ['Elton', 'Freddie', 'Elvis']
 
 for singer in singers:
     print(singer) # Elton Freddie Elvis
+
 
 supplies = ['pencil', 'book']
 
@@ -366,3 +368,31 @@ print(f'Lunch menu: {meals[1]}') #Lunch menu: salad
 meals[2] = 'pizza' #reassigns element @ 2nd index position to pizza
 
 print(f'Dinner menu: {meals[2]}') #Dinner menu: pizza
+
+
+#CODING CHALLENGE #2
+#You have volleyball league and have to make substitutions for some absent players.abs
+#Use list operation to replace "Iliana" w/ "Jack" (sub_1)
+#Replace "Anders" w/ "Celeste" (sub_2)
+#Replace "Gabrielle" w/ "Mary" (sub_3)
+players = ['Iliana', 'Samuel', 'Anders', 'Teresa', 'Gabrielle', 'Alejandro']
+sub1 = "Jack"
+sub2 = "Celeste"
+sub3 = "Mary"
+
+players[0] = sub1 #replaces Iliana w/ Jack
+players[2] = sub2 #replaces Anders w/ Celeste
+players[4] = sub3 #replaces Gabrielle w/ Mary
+
+print(players) # Jack, Samuel, Celeste, Teresa, Mary, Alejandro
+
+
+#CODING CHALLENGE #3
+#Use for loops to keep track w/ shopping_list list
+#For each item, print out a reminder sentence following the format:
+#"Don't forget to buy <...>!"
+#Replace <...> w/ value of the current shopping list item in loop
+shopping_list = ['dish soap', 'kleenex', 'batteries', 'aluminum foil', 'pet food', 'toothpaste', 'lightbulbs']
+
+for reminder in shopping_list: #reminder = loop - that goes through each item in list
+    print(f"Don't forget to buy {reminder}!") #don't forget to buy dish soap. Don't forget to buy kleenex. Don't forget to buy batteries etc
