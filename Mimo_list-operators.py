@@ -88,3 +88,35 @@ print(overview) #-2, -1, 3, 4
 destinations = ['Germany', 'Italy', 'Austria']
 destinations.sort()
 print(destinations) #'Austria', 'Germany', 'Italy'
+
+
+#SUMMING OF DATA
+#Knowing sum of #s in lists is useful when comparing diff datasets
+signups_june = [30, 6, 20, 12]
+signups_july = [20, 5, 100, 40]
+
+#To calculate total of list, use sum(list_name)
+signups = [30, 6, 20, 12]
+print(sum(signups)) #68
+
+#Sum also works w/ negative #s - will subtract them
+quarterly_growth = [-3, 0, 0, 4]
+print(sum(quarterly_growth)) #1
+
+#To reuse the sum of a list, store the sum in variable
+scores = [3, 6, 1, 12]
+total = sum(scores)
+print(total) #22
+
+
+cart = [30, 6, 50]
+print(sum(cart)) #86
+
+
+points_penalties = [-3, 10]
+print(sum(points_penalties)) #7
+
+
+sugar = [120, 50]
+total_sugar = sum(sugar)
+print(total_sugar) #170
