@@ -111,3 +111,4 @@ emails = 157
 full = emails >= capacity # 157 >= 1000
 print("Inbox full")
 print(full) #False
+
