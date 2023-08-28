@@ -78,3 +78,36 @@ in_progress = downloaded != 10  #downloaded doesn't equal 10
 
 print("Download finished:")
 print(in_progress) #False b/c 10 is equal to 10
+
+
+#Data types
+first = 0
+second = 0
+print(first >= second) #True
+
+
+
+paid = 5
+price = 2
+give_change = paid > price #5>2 
+print(give_change) #True
+
+
+characters = 134
+limit_reached = characters >= 250   #134 >=250
+print('Character limit reached:')
+print(limit_reached) #False
+
+
+value = 90
+minimum = 100
+give_discount = value >= minimum #90 >= 100
+print("Give discount:")
+print(give_discount) #False
+
+
+capacity = 1000
+emails = 157
+full = emails >= capacity # 157 >= 1000
+print("Inbox full")
+print(full) #False
