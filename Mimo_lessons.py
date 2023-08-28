@@ -346,7 +346,7 @@ while counter < 4:
 
 # 3. Inside code block, make condition return FALSE & stop loop by incrementing counter variable
 # increases counter by 1 each time loop runs code block 
-counter = 1
+    counter = 1
 
 while counter < 4:  # will print out "1" 3x
     print(counter)
