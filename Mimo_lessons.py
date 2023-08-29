@@ -585,3 +585,54 @@ if do_countdown:  # If True - run below code
 paid = not True  # False
 if paid:  # If not True = if False
     print("Thank you for your purchase")  # skips code b/c false
+
+
+subscribed = False
+subscribed = True #orig var updated from False to True
+
+if subscribed: # If True - print below statement
+    print('Thank you for subscribing') #prints the statement b/c meets condition
+
+
+#USING OPERATORS IN THE CONDITIONALS    
+#Use != operator to run code when 2 values are diffeerent
+
+score = 100
+if score > 50:  #this evaluates to True b/c 100 > 50
+    print('new highest score!') #prints the statement
+
+
+subject = "Math"
+grade = "A"
+
+if grade != "A":  # False A!= A is false
+    print(f'Give {subject} a chance') #will not run b/c does not meet condition
+
+if subject == "Math": #True Math == Math - print below statement
+    print(f"Today's a great day for solving equations! Keep it up and you can earn an {grade}!") #prints statement
+
+
+carbon_level = 200
+if carbon_level < 300: #this is True (run below statement)
+    print(f'{carbon_level}ppm is not enough CO2 for photosynthesis') #statement prints b/c conditional met
+
+
+missing_input = "address"
+no_address = missing_input == "address" #This is TRUE
+
+if no_address:  #True - print below statement
+    print("please fill in your shipping address") #prints b/c condition met
+
+
+character = "Wizard"
+power = 'potions'
+if character == 'Wizard': #compares character and "Wizard" & evaluates to True
+    print(f'Special power: {power}') #prints statement b/c condition met
+
+
+flight_type = "direct"
+direct_flight = flight_type == "direct" #compares flight_type to "direct" & is TRUE
+
+if direct_flight:  #If True, print below statement
+    print("Direct flight found") #prints statement
+
