@@ -112,3 +112,81 @@ full = emails >= capacity # 157 >= 1000
 print("Inbox full")
 print(full) #False
 
+product_id = '37'
+print(type(product_id)) #string
+
+
+# F-strings - use to mix strings and numbers together
+ingredient = "sugar"
+quantity = 100
+print(f'Add {quantity} grams of {ingredient}') #Add 100 grams of sugar
+
+
+task = "dishes"
+print(f'todo: {task}')
+
+
+requests = 2
+print(f'{requests} new friend requests') #2 new friend requests
+
+
+# 2 ways to print the same statement 
+name = "Joshua"
+print("Hello, " + name + "!") #Hello, Joshua!
+print(f'Hello, {name}!') #Hello, Joshua
+
+
+#Can use F-string to insert number 
+min_age = 18
+max_age = 28
+print(f'{88}% of social media users are between {min_age} and {max_age} years old')
+
+
+print(f'Mexico was the leading avocado producer in {2018}')
+
+
+first = 'English'
+second = 'Mandarin Chinese'
+third = 'Hindi'
+print(f'Most spoken languages: {first}, {second}, {third}.') #Most spoken languages: English, Mandarin Chinese, Hindi
+
+
+
+hours = 14
+minutes = 45
+destination = "Paris"
+
+print(f'Your flight to {destination} will depart at {hours}:{minutes}.') #Your flight to Paris will depart at 14:45. 
+
+
+#Can save f string into a variable - don't need ()
+percentage = 11.19 #float
+fact = f'water is {percentage}% hydrogen' 
+print(fact)  # water is 11.19% hydrogen
+
+
+#Those < 17 cannot drive 
+sams_age = 16
+too_young = sams_age < 17 #compare sams_age (16) to too_young (17)
+car_driver = sams_age == 17 #does 16 equal 17
+
+print(f'Is Sam too young to drive?') 
+print(f'Can Sam drive a car? {car_driver}') #False
+
+
+
+#Compare passwords to see if they are the same
+old_password = 'hello123'
+new_password = 'goodbye321'
+compare_old_new = old_password != new_password #compare if hello123 is NOT equal to goodbye 321 - True
+repeat_new_password = 'goodbye321'
+compare_new = new_password == repeat_new_password #are values in new_password & repeat_new password variables the same - True 
+
+print(f'Is new password different from old password? {compare_old_new}') #True
+print(f'Has new password been introduced correctly? {compare_new}') #True
+
+
+
+age = 15
+adult_ticket = age >= 12  #15 >= 12
+print(f'Buy one adult ticket: {adult_ticket}') #True
