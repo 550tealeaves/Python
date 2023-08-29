@@ -186,7 +186,9 @@ print(f'Is new password different from old password? {compare_old_new}') #True
 print(f'Has new password been introduced correctly? {compare_new}') #True
 
 
-
+#Does the person need to buy an adult ticket? 
 age = 15
 adult_ticket = age >= 12  #15 >= 12
 print(f'Buy one adult ticket: {adult_ticket}') #True
+
+

@@ -561,3 +561,27 @@ while reminder_count < 3:
 loop = False # loop is assigned false - if assigned true then activates loop
 while loop:  # while false 
     print('Entered the loop!') # will print it 1x - if loop = true then infinite repeats
+
+
+# CONDITIONALS - if statements run code block if conditions are meant - otherwise skips
+level_completed = True
+if level_completed:  # if True - run below code
+    print("Continue to level 3")  # Prints statement
+
+
+wake_up_time = False
+if wake_up_time:  # If False
+    print('Rise and shine, Jo!')  # Skips this code and does not print anything
+
+
+do_countdown = True
+wait = False
+if do_countdown:  # If True - run below code
+    print('3')  # 3
+    print('2')  # 2
+    print('1')  # 1
+
+
+paid = not True  # False
+if paid:  # If not True = if False
+    print("Thank you for your purchase")  # skips code b/c false
