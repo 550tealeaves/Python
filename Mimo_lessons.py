@@ -636,3 +636,88 @@ direct_flight = flight_type == "direct" #compares flight_type to "direct" & is T
 if direct_flight:  #If True, print below statement
     print("Direct flight found") #prints statement
 
+
+#CONDITIONALS - IF/ELSE STATEMENTS
+is_weekend = False
+
+if is_weekend: # If False
+    print("stay in bed") #won't print b/c condition not met
+
+else:
+    print("rise and shine") #will print this b/c 1st part is skipped
+
+#Else statement doesn't have a condition b/c it is opposite the If condition
+common_friends = 2
+
+if common_friends >= 3: #False b/c 2 is not >= 3
+    print('Friend suggestions: Sue') # will skip this b/c condition not met
+else:
+    print('No new suggestions') #will print this b/c skipped If 
+
+
+mad_meter = 79
+mad_scientist = "Dexter"
+
+if mad_meter >= 134: #This is false - 79 is not >= 134
+    print('Madness achieved!') #will skip this b/c condition not met
+else: 
+    print('Sorry, ' + mad_scientist + ', not mad enough') #prints it b/c IF condition not met
+    # print(f'Sorry, {mad_scientist}, not mad enough') #alternative and less messy way to type it - use f-string
+
+
+choice = 'eclair'
+
+if choice == 'creme brulee': #This is false - eclair doesn't = creme brulee
+    print('You have chosen...wisely') #skips - condition not met
+else:
+    print('You have chosen...poorly') #prints this b/c if statement skipped
+
+
+
+temperature = 5
+
+if temperature < 0:
+    print("Brr....") #skips this b/c 5 not < 0
+elif temperature == 0:
+    print("It's freezing!") #skips this b/c 5 doesn't = 0
+elif temperature < 10: #meets condition - prints below statement
+    print("It's cold out.") #prints b/c all other conditions skipped 
+
+
+hours = 3
+
+if hours <= 2: #False 3 not <= 2
+    print("Occasional app use") #skips this - condition not met
+elif hours <= 5: #True
+    print("Moderate app use") #prints this statement - condition met
+elif hours > 5: #False - 3 not > 5
+    print("Frequent app use") #will skip this 
+
+
+language = "Spanish"
+message = ""
+
+if language == "English": #false - skips below message
+    message = "Thank you"
+
+elif language == "Spanish": #true - prints "Gracias"
+    message = "Gracias"
+
+elif language == "German": #false - skips below message 
+    message = "Danke"
+
+
+#Conditionals - AND/OR operators - use and if code runs if all conditions true. Use or if at least 1 condition is true
+like_author = False 
+like_genre = True
+got_recommendation = True
+
+if like_author or like_genre or got_recommendation: # IF False or True or True - run code below - statement has 3 alt conditions 
+    print("Buy book") #prints code b/c >= 1 parts of code is True
+
+
+read = False
+time_elapsed = 50
+
+if read or time_elapsed > 30: #if false or true - print below statement b/c 1 alt condition is true
+    print("Can't delete the message") #prints this message
