@@ -71,9 +71,9 @@ for filepath in file: #this should be files
     
 # save cleaned files
 
-    id += 1
-    with open(f"files_cleaned/article_cleaned_{id}.txt", "w") as file 
-        file.write(str(text_clean))
+    # id += 1
+    # # with open(f"files_cleaned/article_cleaned_{id}.txt", "w") as file 
+    #     file.write(str(text_clean))
 
 # create Word Clouds
     unique_string=(" ").join(text_clean)
