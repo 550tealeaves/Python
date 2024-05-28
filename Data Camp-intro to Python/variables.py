@@ -123,3 +123,61 @@ fam[:4] #['liz', 1.73, "emma", 1.68]
 
 #if no end index, will include all elements INCLUDING  the last value
 fam[5:] #[1.71, 'dad', 1.89]
+
+
+#EXERCISES
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Print out second element from areas
+print(areas[1]) #11.25
+
+# Print out last element from areas
+print(areas[-1]) #9.50
+
+# Print out the area of the living room
+print(areas[-5]) #20.0
+
+
+#Subset & calculate
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Sum of kitchen and bedroom area: eat_sleep_area
+eat_sleep_area = areas[3] + areas[-3] #adding the areas of kitchen & bedroom
+
+
+
+# Print the variable eat_sleep_area
+print(eat_sleep_area) #28.75
+
+
+# Slicing and dicing
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Use slicing to create downstairs
+downstairs = areas[0:6]
+
+# Use slicing to create upstairs
+upstairs = areas[-4:] #have no ending index - so starts at 4th item from end and includes all items after to the end
+upstairs_alt = areas[6:10] # includes 6th, 7th, 8th, 9th items but NOT the 10th
+
+# Print out downstairs and upstairs
+print(downstairs) # ['hallway', 11.25, 'kitchen', 18.0, 'living room', 20.0]
+print(upstairs) #['bedroom', 10.75, 'bathroom', 9.5]
+print(upstairs_alt) # ['bedroom', 10.75, 'bathroom', 9.5]
+
+
+#Omitting the beginning or ending indices 
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Alternative slicing to create downstairs
+downstairs = areas[:6]
+
+# Alternative slicing to create upstairs
+upstairs = areas[-3:]
+
+print(downstairs) #['hallway', 11.25, 'kitchen', 18.0, 'living room', 20.0]
+print(upstairs) #[10.75, 'bathroom', 9.5]
