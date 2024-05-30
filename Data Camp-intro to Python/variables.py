@@ -181,3 +181,74 @@ upstairs = areas[-3:]
 
 print(downstairs) #['hallway', 11.25, 'kitchen', 18.0, 'living room', 20.0]
 print(upstairs) #[10.75, 'bathroom', 9.5]
+
+
+# REPLACE LIST ELEMENTS
+# Create the areas list
+areas = ["hallway", 11.25, "kitchen", 18.0, "living room", 20.0, "bedroom", 10.75, "bathroom", 9.50]
+
+# Correct the bathroom area
+areas[-1] = 10.50
+
+# Change "living room" to "chill zone"
+areas[4] = "chill zone"
+
+# Print new areas list
+print(areas) #['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5]
+
+
+
+# EXTEND A LIST
+# Use the + operator to add more elements to a list
+# Create the areas list and make some changes
+areas = ["hallway", 11.25, "kitchen", 18.0, "chill zone", 20.0,
+         "bedroom", 10.75, "bathroom", 10.50]
+
+# Add poolhouse data to areas, new list is areas_1
+areas_1 = areas + ["poolhouse", 24.5]
+
+print(areas_1) #['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5, 'poolhouse', 24.5]
+
+# Add garage data to areas_1, new list is areas_2
+areas_2 = areas_1 + ["garage", 15.45]
+
+print(areas_2) #['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5, 'poolhouse', 24.5, 'garage', 15.45]
+
+
+
+# DELETE LIST ELEMENTS
+# Once you remove an element from a list, the indexes of the elements that come after the deleted element all change! So you remove 1st element, indices change, then you remove 2nd element, and indices change again.
+areas = ["hallway", 11.25, "kitchen", 18.0,
+        "chill zone", 20.0, "bedroom", 10.75,
+         "bathroom", 10.50, "poolhouse", 24.5,
+         "garage", 15.45]
+
+# Same line
+#command1; command2
+
+# Separate lines
+#command1
+#command2
+
+#del(areas[10]); del(areas[11]) # removes the 10th/11th indices - poolhouse, 24.5
+
+del(areas[-4:-2])
+print(areas) #['hallway', 11.25, 'kitchen', 18.0, 'chill zone', 20.0, 'bedroom', 10.75, 'bathroom', 10.5, 24.5, 15.45]
+
+
+
+# INNER WORKINGS OF LISTS
+# Create list areas
+areas = [11.25, 18.0, 20.0, 10.75, 9.50]
+
+# Create areas_copy - use list(array_name) to prevent changes to the original areas array w/o this then printing areas would have the same changes as areas_copy
+areas_copy = list(areas)
+
+# Change areas_copy
+areas_copy[0] = 5.0
+
+
+# Print areas
+print(areas) #[11.25, 18.0, 20.0, 10.75, 9.5]
+print(areas_copy) #[5.0, 18.0, 20.0, 10.75, 9.5]
+
