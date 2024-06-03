@@ -80,3 +80,7 @@ print(dist) # 40317.10572106901
 # Different ways to import packages
 # Wants to import the inv() function from the linalg subset of package, scipy & store it as my_inv
 from scipy.linalg import inv as my_inv
+
+
+
+# ****NUMPY******
