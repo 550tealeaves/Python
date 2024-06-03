@@ -84,3 +84,126 @@ from scipy.linalg import inv as my_inv
 
 
 # ****NUMPY******
+# 	• Numeric Python
+# 	• Alternative to Python List: NumPy Array
+# 	• Does calculations over entire arrays
+# 	• Quick/easy install
+# 		○ Must use pip3 install numpy in the terminal
+# 			§ Numpy doesn't work for me in VS Code
+# 	• Knows how to work with arrays like they were single values
+# 	• Assumptions
+# 		○ Assumes Numpy arrays have only 1 type
+# 			§ So if you mix data types, it will convert them into a single type
+
+
+# 	• W/o numpy array, adding lists just results in concatenation of the values (just put them next to each other)
+# 	• Using numpy_array - then it will add the values of each list
+
+
+# Numpy Subsetting
+# 	• Can use array of booleans to get index values
+# 	• Ex: want to see what values are greater than/ less than a specific value
+# 		○ Bmi > 23
+# 			§ Array([False, False, False, True, False])
+# 				□ Uses an Array of booleans 
+# 	• Now use the boolean to perform subsetting
+# 		○ Bmi[bmi>23]
+# 			§ Array ([24.7473475])
+
+
+
+# Import the numpy package as np - this doesn't work on VS code
+import numpy as np
+
+# Create list baseball
+baseball = [180, 215, 210, 210, 188, 176, 209, 200]
+
+# Create a numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out type of np_baseball
+print(type(np_baseball)) #class 'numpy.ndarray'
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Create a numpy array from height_in: np_height_in
+np_height_in = np.array(height_in)
+
+# Print out np_height_in
+print(np_height_in) # [74 74 72 ... 75 75 73]
+
+# Convert np_height_in to m: np_height_m
+np_height_m = np_height_in * 0.0254
+
+# Print np_height_m
+print(np_height_m) # [1.8796 1.8796 1.8288 ... 1.905  1.905  1.8542]
+
+
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Create array from height_in with metric units: np_height_m
+np_height_m = np.array(height_in) * 0.0254
+
+# Create array from weight_lb with metric units: np_weight_kg
+np_weight_kg = np.array(weight_lb) * 0.453592
+
+
+# Calculate the BMI: bmi
+bmi = np_weight_kg / np_height_m**2
+
+# Print out bmi
+print(bmi) # [23.11037639 27.60406069 28.48080465 ... 25.62295933 23.74810865
+# 25.72686361]
+
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Calculate the BMI: bmi
+np_height_m = np.array(height_in) * 0.0254
+np_weight_kg = np.array(weight_lb) * 0.453592
+bmi = np_weight_kg / np_height_m ** 2
+
+# Create the light array
+light = bmi < 21
+
+# Print out light
+print(light) #[False False False ... False False False]
+
+# Print out BMIs of all baseball players whose BMI is below 21
+print(bmi[light]) #[20.54255679 20.54255679 20.69282047 20.69282047 20.34343189 20.34343189, 20.69282047 20.15883472 19.4984471  20.69282047 20.9205219 ]
+
+
+#np.array must have one data type - it will convert mixed types to a single type
+np.array([True, 1, 2]) + np.array([3, 4, False]) # array([4, 5, 2])
+
+np.array([4, 3, 0]) + np.array([0, 2, 2]) # this has the same output as the above line
+
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Store weight and height lists as numpy arrays
+np_weight_lb = np.array(weight_lb)
+np_height_in = np.array(height_in)
+
+# Print out the weight at index 50
+print(np_weight_lb[50]) #200
+
+# Print out sub-array of np_height_in: index 100 up to and including index 110
+print(np_height_in[100:111]) #[73 74 72 73 69 72 73 75 75 73 72]
