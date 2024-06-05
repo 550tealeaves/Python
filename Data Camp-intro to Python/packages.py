@@ -218,6 +218,15 @@ print(np_height_in[100:111]) #[73 74 72 73 69 72 73 75 75 73 72]
 	# 		§ Can create multidimensional arrays
 	# • Can create 2D NumPy arrays from list of lists
 	# • All elements must be the same data type or else, it will force conversion into a homogeneous type
+    #Subsetting
+    # regular list of lists
+    # x = [["a", "b"], ["c", "d"]]
+    # [x[0][0], x[1][0]]
+
+    # numpy
+    # import numpy as np
+    # np_x = np.array(x)
+    # np_x[:, 0]
 
 import numpy as np
 np_2d = np.array([[1.73, 1.68, 1.71, 1.89, 1.79], [65.4, 59.2, 63.6, 88.4, 68.7]]) #can create 2D numpy arrays from list of lists
