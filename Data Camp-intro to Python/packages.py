@@ -207,3 +207,65 @@ print(np_weight_lb[50]) #200
 
 # Print out sub-array of np_height_in: index 100 up to and including index 110
 print(np_height_in[100:111]) #[73 74 72 73 69 72 73 75 75 73 72]
+
+
+
+# 2D NumPy arrays
+	# • Numpy.ndarray
+	# 	○ Numpy. = type that was defined in the numpy package
+	# 	○ Ndarray = n-dimensional array
+	# 		§ Np_height & np_weight = 1D arrays
+	# 		§ Can create multidimensional arrays
+	# • Can create 2D NumPy arrays from list of lists
+	# • All elements must be the same data type or else, it will force conversion into a homogeneous type
+
+import numpy as np
+np_2d = np.array([[1.73, 1.68, 1.71, 1.89, 1.79], [65.4, 59.2, 63.6, 88.4, 68.7]]) #can create 2D numpy arrays from list of lists
+
+np_2d #array([[ 1.73,  1.68,  1.71,  1.89,  1.79],
+    #    [65.4 , 59.2 , 63.6 , 88.4 , 68.7 ]])
+
+# this shows that array has 2 rows w/ 5 col
+#shape = attribute of 2d array that provides info on what data structure looks like
+np_2d.shape # (2, 5) - 2x5 table (2 rows, 5 cols)
+
+#treat the lists like they are elements in another list - 1st list has index=0, 2nd has index=1
+np_2d[0] #array([1.73, 1.68, 1.71, 1.89, 1.79])
+
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Create baseball, a list of lists
+baseball = [[180, 78.4],
+            [215, 102.7],
+            [210, 98.5],
+            [188, 75.2]]
+
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the type of np_baseball
+print(type(np_baseball)) #class 'numpy.ndarray'
+
+# Print out the shape of np_baseball
+print(np_baseball.shape) # (4,2) 4 rows, 2 col
+
+
+
+
+
+# Import numpy package
+import numpy as np
+
+# Create a 2D numpy array from baseball: np_baseball
+np_baseball = np.array(baseball)
+
+# Print out the shape of np_baseball
+print(np_baseball.shape) #(1015, 2) - 1015 rows, 2 col
+
+
+
