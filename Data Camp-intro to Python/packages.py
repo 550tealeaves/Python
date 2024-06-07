@@ -278,3 +278,170 @@ print(np_baseball.shape) #(1015, 2) - 1015 rows, 2 col
 
 
 
+
+
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (2 cols)
+np_baseball = np.array(baseball)
+
+# Print out the 50th row of np_baseball
+print(np_baseball[49, :]) #[70  195]
+
+# Select the entire second column of np_baseball: np_weight_lb
+np_weight_lb = np_baseball[:, 1]
+
+# Print out height of 124th player
+print(np_baseball[123:0]) #75
+
+
+
+
+
+
+# Import numpy package
+import numpy as np
+
+# Create np_baseball (3 cols)
+np_baseball = np.array(baseball)
+
+# Print out addition of np_baseball and updated
+print(np_baseball + updated)
+
+# Create numpy array: conversion
+conversion = np.array([0.0254, 0.453592, 1])
+
+# Print out product of np_baseball and conversion
+print(np_baseball * conversion) #[[ 75.2303559  168.83775102  23.99      ]
+#  [ 75.02614252 231.09732309  35.69      ]
+#  [ 73.1544228  215.08167641  31.78      ]
+#  ...
+#  [ 76.09349925 209.23890778  26.19      ]
+#  [ 75.82285669 172.21799965  32.01      ]
+#  [ 73.99484223 203.14402711  28.92      ]]
+# [[ 1.8796  81.64656 22.99   ]
+#  [ 1.8796  97.52228 34.69   ]
+#  [ 1.8288  95.25432 30.78   ]
+#  ...
+#  [ 1.905   92.98636 25.19   ]
+#  [ 1.905   86.18248 31.01   ]
+#  [ 1.8542  88.45044 27.92   ]]
+
+
+
+
+#NumPy: BASIC STATS
+
+# Example, surveyed 5,000 ppl about height/weight 
+
+# Results in array w/ 5000 rows and 2 columns 
+
+# Can use numpy to help make sense of the data 
+
+    # NumPy mean function = np.mean 
+
+        # Np.mean(np_city[:, 0]) 
+
+        # Gives mean height for all 5000 records 
+
+        # Had to do subsetting of the np_city dataset to get the height column 
+
+    # NumPy median function = np.median 
+
+        # Np.median(np_city[:, 0]) 
+
+        # Provides median height for all 5000 records 
+
+    # Correlation coefficient = np.corrcoef 
+
+        # Np.corrcoef(np_city[:, 0], np_city[:, 1]) 
+
+        # Check to see if the height and weight are correlated  
+
+    # Standard deviation = np.std 
+
+        # Np.std(np_city[:, 0]) 
+
+    # Sum = np.sum() 
+
+    # Sort = np.sort() 
+ 
+
+# What makes this different than regular python is the much faster speed b/c numpy forces a single data type 
+
+# How was the data generated for the tutorials? 
+# Arguments for np.random.normal() 
+    # Dist mean 
+    # Dist SD 
+    # # samples 
+# Randomly sampled 2 distribution 5000 times to get the height/weight arrays 
+    # Height = np.round(np.random.normal(1.75, 0.20, 5000), 2) 
+    # Weight = np.round(np.random.normal(60.32, 15, 5000), 2)   
+    # Np_city = np.column_stack(height, weight)) 
+
+
+# Import numpy
+import numpy as np
+
+# Create np_height_in from np_baseball
+np_height_in = np_baseball[:, 0]
+
+# Print out the mean of np_height_in
+print('mean of np_height_in')
+print(np.mean(np_height_in)) #1586.4610837438424
+
+# Print out the median of np_height_in
+print('median of np_height_in')
+print(np.median(np_height_in)) #74.0
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Print mean height (first column)
+avg = np.mean(np_baseball[:,0])
+print("Average: " + str(avg)) #Average: 73.6896551724138
+
+# Print median height. Replace 'None'
+med = np.median(np_baseball[:,0])
+print("Median: " + str(med)) #Median: 74.0
+
+# Print out the standard deviation on height. Replace 'None'
+stddev = np.std(np_baseball[:,0])
+print("Standard Deviation: " + str(stddev)) #Standard Deviation: 2.312791881046546
+
+# Print out correlation between first and second column. Replace 'None'
+corr = np.corrcoef(np_baseball[:,0], np_baseball[:,1])
+print("Correlation: " + str(corr)) #Correlation: [[1.         0.53153932]
+                                                # [0.53153932 1.        ]]
+
+
+
+
+
+# Import numpy
+import numpy as np
+
+# Convert positions and heights to numpy arrays: np_positions, np_heights
+np_positions = np.array(positions)
+np_heights = np.array(heights)
+
+
+#Extract all the heights of the goalkeepers. You can use a little trick here: use np_positions == 'GK' as an index for np_heights. Assign the result to gk_heights
+# Heights of the goalkeepers: gk_heights
+gk_heights = np_heights[np_positions=='GK']
+
+
+#Extract all the heights of all the other players. This time use np_positions != 'GK' as an index for np_heights. Assign the result to other_heights
+# Heights of the other players: other_heights
+other_heights = np_heights[np_positions != 'GK']
+
+# Print out the median height of goalkeepers. Replace 'None'
+print("Median height of goalkeepers: " + str(np.median(gk_heights)))
+
+# Print out the median height of other players. Replace 'None'
+print("Median height of other players: " + str(np.median(other_heights)))
