@@ -14,7 +14,7 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 import seaborn as sns
-!pip install -U scikit-learn==1.4
+#!pip install -U scikit-learn==1.4
 from pandas.plotting import scatter_matrix
 
 
