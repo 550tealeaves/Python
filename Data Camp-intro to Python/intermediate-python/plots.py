@@ -62,7 +62,6 @@ pop = [31.889923, 3.600523, 33.333216, 12.420476, 40.301927, 20.434176, 8.199783
 import matplotlib.pyplot as plt
 
 # Build Scatter plot
-print(pop)
 plt.scatter(pop, life_exp)
 
 # Show plot
