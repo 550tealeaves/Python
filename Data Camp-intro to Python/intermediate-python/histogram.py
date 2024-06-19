@@ -233,7 +233,7 @@ plt.show()
 plt.clf()
 
 #Hist of life_exp1950 w/ 15 bins
-plt.hist(life_exp1950, bins=15, color='brown', orientation='horizontal')
+plt.hist(life_exp1950, bins=15, color='brown', orientation='horizontal', histtype='step')
 plt.show()
 plt.clf()
 
