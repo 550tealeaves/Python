@@ -141,6 +141,10 @@ plt.show()
 
 
 
+
+
+
+
 ## EXERCISE 4 - COLORS - CAN USE A PRE-DETERMINED LIST FOR COLOR AND SET ALPHA
 
 # Create color list
@@ -159,6 +163,9 @@ plt.xticks([1000,10000,100000], ['1k','10k','100k'])
 
 # Show the plot
 plt.show()
+
+
+
 
 
 
