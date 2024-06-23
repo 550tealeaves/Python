@@ -23,3 +23,39 @@ while error > 1:
 error = 50.0
 while error > 1:
     (error)
+
+
+
+##EXERCISE 1 - WARM UP - HOW MANY PRINTOUTS
+x = 1
+while x < 4 :
+    print(x)
+    x = x + 1 #3
+
+
+
+
+##EXERCISE 2 - BASIC WHILE LOOP
+# Initialize offset
+offset = 8
+
+# Code the while loop
+while offset != 0:
+    print("correcting...")
+    offset = offset - 1
+    print(offset)
+
+
+
+#EXERCISE 3 - ADD CONDITIONALS
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0 :
+      offset = offset - 1,
+    else : 
+      offset = offset + 1    
+    print(offset)
