@@ -32,5 +32,11 @@ for val in meas: #for loop prints out the entire array on iteration - not what w
 
 #np.nditer function will print out each individual element in the arrays
 #the input is the array you are iterating over (meas)
+import numpy as np 
 for val in np.nditer(meas):
     print(val)
+
+
+
+
+##EXERCISE [;TP FP]
