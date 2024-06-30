@@ -41,7 +41,7 @@ for val in np.nditer(meas):
 
 ##PART 2
 import pandas as pd 
-brics = pd.read_csv("brics.csv", index_col=0)
+brics = pd.read_csv("Data Camp-intro to Python/intermediate-python/brics.csv", index_col=0)
 for value in brics:
     print(value)
 
@@ -55,7 +55,7 @@ for value in brics:
 
 
 
-brics = pd.read_csv("brics.csv", index_col=0)
+brics = pd.read_csv("Data Camp-intro to Python/intermediate-python/brics.csv", index_col=0)
 for lab, row in brics.iterrows():
     print(lab)
     print(row)
@@ -70,7 +70,7 @@ for lab, row in brics.iterrows():
 import pandas as pd 
 brics = pd.read_csv("brics.csv", index_col=0)
 for lab, row in brics.iterrows():
-    print(lab + ": " + rows["capital"])
+    print(lab + ": " + row["capital"])
 
 ##prints out the row label (country initials) & country capital
 
@@ -88,7 +88,7 @@ for lab, row in brics.iterrows():
 
 ## ADDING COLUMNS - CREATE NEW COL, CALLED NAME_LENGTH, THAT HAS # OF CHARACTERS OF COUNTRY NAME
 import pandas as pd 
-brics = pd.read_csv("brics.csv", index_col=0)
+brics = pd.read_csv("Data Camp-intro to Python/intermediate-python/brics.csv", index_col=0)
 for lab, row in brics.iterrows():
     #creating series for each iteration
     brics.loc[lab, "name_length"] = len(row["country"])
@@ -104,7 +104,7 @@ for lab, row in brics.iterrows():
 	# 	○ Creates new array that can be stored as new col 
 
 import pandas as pd 
-brics = pd.read_csv("brics.csv", index_col=0)
+brics = pd.read_csv("Data Camp-intro to Python/intermediate-python/brics.csv", index_col=0)
 brics["name_length"] = brics["country"].apply(len)
 print(brics)
 
