@@ -3,7 +3,61 @@
 	# • Right side of the equal sign contains the necessary formula to creating the new col 
 	# 	○ Formula can contain 1+ col 
 
+import pandas as pd
 
+dogs = pd.read_csv("Data Camp-intro to Python/data-manipulation-pandas/dogs.csv", index_col=0)
+
+dogs.head()
+dogs.describe()
+dogs.info() 
+
+
+##ADD NEW COL AKA FEATURE ENGINEERING
+#LEFT SIDE OF "=" HAS NEW COL WRAPPED IN []
+#RIGHT SIDE OF "=" HAS RELEVANT FORMULA TO CREATE NEW COL
+#FORM CAN CONTAIN 1+ COL
+
+#CREATE COL HEIGHT_M THAT HAS THE HEIGHTS CONVERTED TO METERS
+dogs["height_m"] = dogs["height_cm"] /100
+print(dogs)
+
+#      name        breed  color  ...  weight_kg  date_of_birth height_m
+# 0    Bella     Labrador  Brown  ...         24       7/1/2013     0.56     
+# 1  Charlie       Poodle  Black  ...         24      9/16/2016     0.43     
+# 2     Lucy    Chow Chow  Brown  ...         24      8/25/2014     0.46     
+# 3   Cooper    Schnauzer   Gray  ...         17     12/11/2011     0.49     
+# 4      Max     Labrador  Black  ...         29      1/20/2017     0.59     
+# 5   Stella    Chihuahua    Tan  ...          2      4/20/2015     0.18     
+# 6   Bernie  St. Bernard  White  ...         74      2/27/2018     0.77 
+
+
+
+#CREATE COL FOR DOG BMI
+dogs["bmi"] = dogs["weight_kg"] / dogs["height_m"] **2
+print(dogs)
+
+#       name        breed  color  ...  date_of_birth  height_m         bmi
+# 0    Bella     Labrador  Brown  ...       7/1/2013      0.56   76.530612   
+# 1  Charlie       Poodle  Black  ...      9/16/2016      0.43  129.799892   
+# 2     Lucy    Chow Chow  Brown  ...      8/25/2014      0.46  113.421550   
+# 3   Cooper    Schnauzer   Gray  ...     12/11/2011      0.49   70.803832   
+# 4      Max     Labrador  Black  ...      1/20/2017      0.59   83.309394   
+# 5   Stella    Chihuahua    Tan  ...      4/20/2015      0.18   61.728395   
+# 6   Bernie  St. Bernard  White  ...      2/27/2018      0.77  124.810255
+
+
+
+#MULTIPLE MANIPULATIONS
+bmi_lt_100 = dogs[dogs["bmi"] < 100] #select those w/ bmi < 100
+bmi_lt_100_height = bmi_lt_100.sort_values("height_cm", ascending=False) #sort the heights in descending order
+bmi_lt_100_height[["name", "height_cm", "bmi"]] #select only these 3 cols to show
+
+#SHOWS THE NAME/HEIGHT_CM & BMI COLS FOR DOGS W/ BMI < 100 & HEIGHTS SORTED IN DESCENDING ORDER
+#      name  height_cm        bmi
+# 4     Max         59  83.309394
+# 0   Bella         56  76.530612
+# 3  Cooper         49  70.803832
+# 5  Stella         18  61.728395
 
 
 
