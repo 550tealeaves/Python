@@ -1,3 +1,147 @@
+import pandas as pd
+
+dogs = pd.read_csv("Data Camp-intro to Python/data-manipulation-pandas/dogs.csv", index_col=0)
+
+dogs.head()
+dogs.describe()
+dogs.info() 
+
+dogs.sort_values("weight_kg") #sorts weights ascending
+
+#       name        breed  color  height_cm  weight_kg date_of_birth
+# 5   Stella    Chihuahua    Tan         18          2     4/20/2015
+# 3   Cooper    Schnauzer   Gray         49         17    12/11/2011
+# 0    Bella     Labrador  Brown         56         24      7/1/2013
+# 1  Charlie       Poodle  Black         43         24     9/16/2016
+# 2     Lucy    Chow Chow  Brown         46         24     8/25/2014
+# 4      Max     Labrador  Black         59         29     1/20/2017
+# 6   Bernie  St. Bernard  White         77         74     2/27/2018
+
+dogs.sort_values("weight_kg", ascending=False) #sorts weights descending
+
+#      name        breed  color  height_cm  weight_kg date_of_birth
+# 6   Bernie  St. Bernard  White         77         74     2/27/2018
+# 4      Max     Labrador  Black         59         29     1/20/2017
+# 0    Bella     Labrador  Brown         56         24      7/1/2013
+# 1  Charlie       Poodle  Black         43         24     9/16/2016
+# 2     Lucy    Chow Chow  Brown         46         24     8/25/2014
+# 3   Cooper    Schnauzer   Gray         49         17    12/11/2011
+# 5   Stella    Chihuahua    Tan         18          2     4/20/2015
+
+
+#SORT BY MULTIPLE VARIABLES - wrap in ([])
+dogs.sort_values(["weight_kg", "height_cm"])
+
+#       name        breed  color  height_cm  weight_kg date_of_birth
+# 5   Stella    Chihuahua    Tan         18          2     4/20/2015
+# 3   Cooper    Schnauzer   Gray         49         17    12/11/2011
+# 1  Charlie       Poodle  Black         43         24     9/16/2016
+# 2     Lucy    Chow Chow  Brown         46         24     8/25/2014
+# 0    Bella     Labrador  Brown         56         24      7/1/2013
+# 4      Max     Labrador  Black         59         29     1/20/2017
+# 6   Bernie  St. Bernard  White         77         74     2/27/2018
+
+
+
+#SORT BY MULTIPLE VARIABLES & CHANGE DIRECTION
+dogs.sort_values(["weight_kg", "color"], ascending=[True, False])
+
+#       name        breed  color  height_cm  weight_kg date_of_birth
+# 5   Stella    Chihuahua    Tan         18          2     4/20/2015
+# 3   Cooper    Schnauzer   Gray         49         17    12/11/2011
+# 0    Bella     Labrador  Brown         56         24      7/1/2013
+# 2     Lucy    Chow Chow  Brown         46         24     8/25/2014
+# 1  Charlie       Poodle  Black         43         24     9/16/2016
+# 4      Max     Labrador  Black         59         29     1/20/2017
+# 6   Bernie  St. Bernard  White         77         74     2/27/2018
+
+
+#SUBSETTING COLUMNS
+#will return as a panda series
+dogs["name"]
+
+# 0      Bella
+# 1    Charlie
+# 2       Lucy
+# 3     Cooper
+# 4        Max
+# 5     Stella
+# 6     Bernie
+# Name: name, dtype: object
+
+
+#SUBSETTING MULTIPLE COLUMNS
+dogs[["breed", "height_cm"]]
+
+#          breed  height_cm
+# 0     Labrador         56
+# 1       Poodle         43
+# 2    Chow Chow         46
+# 3    Schnauzer         49
+# 4     Labrador         59
+# 5    Chihuahua         18
+# 6  St. Bernard         77
+
+
+#SUBSETTING ROWS
+dogs[dogs["height_cm"]>50]
+
+#      name        breed  color  height_cm  weight_kg date_of_birth
+# 0   Bella     Labrador  Brown         56         24      7/1/2013
+# 4     Max     Labrador  Black         59         29     1/20/2017
+# 6  Bernie  St. Bernard  White         77         74     2/27/2018
+
+
+#SUBSETTING BASED ON TEXT DATA
+dogs[dogs["breed"] == "Labrador"]
+
+#     name     breed  color  height_cm  weight_kg date_of_birth
+# 0  Bella  Labrador  Brown         56         24      7/1/2013
+# 4    Max  Labrador  Black         59         29     1/20/2017
+
+
+dogs[dogs["date_of_birth"]< "2015-01-01"] #when writing dates list it as Y-M-D
+
+#     name        breed  color  height_cm  weight_kg date_of_birth
+# 3  Cooper    Schnauzer   Gray         49         17    12/11/2011
+# 4     Max     Labrador  Black         59         29     1/20/2017
+# 6  Bernie  St. Bernard  White         77         74     2/27/2018
+
+
+
+
+#SUBSET ROWS TO MEET MULTIPLE CONDITIONS
+is_lab = dogs["breed"] == "Labrador" #seelct rows w/ breed Labrador
+is_brown = dogs["color"] == "Brown" #select rows w/ color Brown
+dogs[is_lab & is_brown] #select row w/ both breed Labrador & color Brown
+
+#     name     breed  color  height_cm  weight_kg date_of_birth
+# 0  Bella  Labrador  Brown         56         24      7/1/2013
+
+
+##ALTERNATIVE WYA TO TYPE THE ROWS/MULT CONDITIONS
+dogs[(dogs["breed"] == "Labrador") & (dogs["color"] == "Brown")]
+
+#     name     breed  color  height_cm  weight_kg date_of_birth
+# 0  Bella  Labrador  Brown         56         24      7/1/2013
+
+
+
+
+#FILTER ON MULTIPLE VALUES OF CATEGORICAL VARIABLE
+# USE .isin() METHOD - WHICH ACCEPTS A LIST OF VALUES TO FILTER FOR
+is_black_or_brown = dogs["color"].isin(["Black", "Brown"]) #select rows w/ color Brown or Black
+dogs[is_black_or_brown]
+
+#       name      breed  color  height_cm  weight_kg date_of_birth
+# 0    Bella   Labrador  Brown         56         24      7/1/2013
+# 1  Charlie     Poodle  Black         43         24     9/16/2016
+# 2     Lucy  Chow Chow  Brown         46         24     8/25/2014
+# 4      Max   Labrador  Black         59         29     1/20/2017
+
+
+
+
 ##EXERCISE 3 - SORTING ROWS
 # Sort homelessness by individuals
 homelessness_ind = homelessness.sort_values("individuals")
