@@ -151,5 +151,70 @@ print(nb.score(X_test, y_test)) #0.5161290322580645
 
 
 
+##REDUNDANT FEATURES##
+# 	• Goal of feature selection is to remove unnecessary features that create noise
+# 	• How do you know if feature is unnecessary?
+# 		○ Check to see if there is a redundancy 
+
+# What's a redundant feature?
+# 	• Exists in another form as another feature
+# 	• If 2 features strongly correlated
+# 	• Duplicated features
+
+# 	• Feature selection = iterative process
+
+
+# Scenarios for manual removal of features
+# 	• Dataset has repeated info in feature set
+# 		○ Ex: city/state, lat/long (may only need 1)
+# 		○ Drop one based on the end goal
+# 	• If you take avg to use, you can drop the values used to calculate the avg
+
+
+# Correlated features
+# 	• Use corr() method
+
+
+# 	• Features A/B have scores near 1, so one should be dropped 
+
+
+##SELECT RELEVANT FEATURES
+# Create a list of redundant column names to drop
+to_drop = ["category_desc", "created_date", "locality", "region", "vol_requests"]
+
+# Drop those columns from the dataset
+volunteer_subset = volunteer.drop(to_drop, axis=1)
+
+# Print out the head of volunteer_subset
+print(volunteer_subset.head())
+
+
+#                                                title  hits  postalcode  vol_requests_lognorm  created_month  Education  Emergency Preparedness  Environment  Health  Helping Neighbors in Need  \
+# 1                                       Web designer    22     10010.0                 0.693              1          0                       0            0       0                          0   
+# 2      Urban Adventures - Ice Skating at Lasker Rink    62     10026.0                 2.996              1          0                       0            0       0                          0   
+# 3  Fight global hunger and support women farmers ...    14      2114.0                 6.215              1          0                       0            0       0                          0   
+# 4                                      Stop 'N' Swap    31     10455.0                 2.708              1          0                       0            1       0                          0   
+# 5                               Queens Stop 'N' Swap   135     11372.0                 2.708              1          0                       0            1       0                          0   
+
+#    Strengthening Communities  
+# 1                          1  
+# 2                          1  
+# 3                          1  
+# 4                          0  
+# 5                          0  
+
+
+
+
+##CHECKING FOR CORRELATED FEATURES
+# Print out the column correlations of the wine dataset
+print(wine.corr())
+
+# Drop that column from the DataFrame
+wine = wine.drop("Flavanoids", axis=1)
+
+print(wine.head())
+
+
 
 
