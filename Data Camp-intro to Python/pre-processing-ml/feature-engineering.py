@@ -96,7 +96,7 @@ print(volunteer[["start_date_converted", "start_date_month"]].head())
 
 
 
-
+###--EXTRACTING TEXT--###
 
 # Write a pattern to extract numbers and decimals
 def return_mileage(length):
@@ -119,3 +119,37 @@ print(hiking[["Length", "Length_num"]].head())
 # 2  0.75 miles        0.75
 # 3   0.5 miles        0.50
 # 4   0.5 miles        0.50
+
+
+
+
+
+##VECTORIZING TEXT
+
+# Take the title text
+title_text = volunteer["title"]
+
+# Create the vectorizer method
+tfidf_vec = TfidfVectorizer()
+
+# Transform the text into tf-idf vectors
+text_tfidf = tfidf_vec.fit_transform(title_text)
+
+
+
+
+##TEXT CLASSIFICATION USING TF/IDF VECTORS
+# Split the dataset according to the class distribution of category_desc
+y = volunteer["category_desc"]
+X_train, X_test, y_train, y_test = train_test_split(text_tfidf.toarray(), y, stratify=y, random_state=42)
+
+# Fit the model to the training data
+nb.fit(X_train, y_train)
+
+# Print out the model's accuracy
+print(nb.score(X_test, y_test)) #0.5161290322580645
+
+
+
+
+
