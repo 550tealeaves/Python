@@ -87,3 +87,4 @@ for c in classifiers:
 # Plot the classifiers
 plot_4_classifiers(X, y, classifiers)
 plt.show()
+
