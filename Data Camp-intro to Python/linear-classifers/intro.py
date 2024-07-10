@@ -64,3 +64,26 @@ print("Probability of positive review:", lr.predict_proba(review2_features)[0,1]
 # Probability of positive review: 0.8111238392808809
 # Review: Total junk! I'll never watch a film by that director again, no matter how good the reviews.
 # Probability of positive review: 0.5888052699327708
+
+
+
+# Visualizing decision boundaries
+# In this exercise, you'll visualize the decision boundaries of various classifier types.
+
+# A subset of scikit-learn's built-in wine dataset is already loaded into X, along with binary labels in y.
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC, LinearSVC
+from sklearn.neighbors import KNeighborsClassifier
+
+# Define the classifiers
+classifiers = [LogisticRegression(), LinearSVC(),
+               SVC(), KNeighborsClassifier()]
+
+# Fit the classifiers
+for c in classifiers:
+    c.fit(X, y)
+
+# Plot the classifiers
+plot_4_classifiers(X, y, classifiers)
+plt.show()
