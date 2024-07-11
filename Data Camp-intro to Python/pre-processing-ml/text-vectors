@@ -16,5 +16,38 @@ print(return_weights(vocab, tfidf_vec.vocabulary_, text_tfidf, 8, 3))
 
 
 
+##Exploring text vectors, part 2
+# Using the return_weights() function you wrote in the previous exercise, you're now going to extract the top words from each document in the text vector, return a list of the word indices, and use that list to filter the text vector down to those top words.
+
+def words_to_filter(vocab, original_vocab, vector, top_n):
+    filter_list = []
+    for i in range(0, vector.shape[0]):
+    
+        # Call the return_weights function and extend filter_list
+        filtered = return_weights(vocab, original_vocab, vector, i, top_n)
+        filter_list.extend(filtered)
+        
+    # Return the list in a set, so we don't get duplicate word indices
+    return set(filter_list)
+
+# Call the function to get the list of word indices
+filtered_words = words_to_filter(vocab, tfidf_vec.vocabulary_, text_tfidf, 3)
+
+# Filter the columns in text_tfidf to only those in filtered_words
+filtered_text = text_tfidf[:, list(filtered_words)]
 
 
+
+
+# Use train_test_split() on the filtered_text text vector, the y labels (which is the category_desc labels), and pass the y set to the stratify parameter, since we have an uneven class distribution.
+# Fit the nb Naive Bayes model to X_train and y_train.
+# Calculate the test set accuracy of nb.
+
+# Split the dataset according to the class distribution of category_desc
+X_train, X_test, y_train, y_test = train_test_split(filtered_text.toarray(), y, stratify=y, random_state=42)
+
+# Fit the model to the training data
+nb.fit(X_train, y_train)
+
+# Print out the model's accuracy
+print(nb.score(X_test, y_test)) #0.5161290322580645
