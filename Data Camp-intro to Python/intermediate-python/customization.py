@@ -36,7 +36,7 @@ pop = [2.53, 2.57, 2.62, 2.67, 2.71, 2.76, 2.81, 2.86, 2.92, 2.97, 3.03, 3.08, 3
 #Add the new data as a list and "concatenate" it with the existing variables
 year = [1800, 1850, 1900] + year
 pop = []
-
+print(year) #now includes 1800, 1850, & 1900
 
 plt.plot(year, pop, color='purple')
 
