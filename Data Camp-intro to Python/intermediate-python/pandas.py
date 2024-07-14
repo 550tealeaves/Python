@@ -80,7 +80,7 @@ row_labels = ['US', 'AUS', 'JPN', 'IN', 'RU', 'MOR', 'EG']
 
 
 # Specify row labels of cars
-car.index = row_labels
+cars.index = row_labels
 
 # Print cars again
 print(cars)
