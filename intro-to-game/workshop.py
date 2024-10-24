@@ -169,5 +169,9 @@ new_game = Game('frogger_bkg.png', SCREEN_TITLE, SCREEN_WIDTH, SCREEN_HEIGHT) # 
 new_game.runGame() #will run the runGame method, which is part of the Game class
 
 
-#Next have to add collision detection
-
+# NEXT STEPS AND CHALLENGES TO ADD
+# Nxt have to add collision detection
+# Create power up objects
+# Move the treasure chest
+# Make enemies move up/down
+# Make the enemy follow the player
