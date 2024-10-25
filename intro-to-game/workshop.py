@@ -1,3 +1,6 @@
+# install pygame in the terminal 
+# python3 -m pip install -U pygame --user (not working b/c I don't have python installed but run it through Anaconda)
+
 # Import pygame library
 #Docs are at https://pygame.org/docs/
 import pygame
