@@ -3,7 +3,9 @@
 
 # Import pygame library
 #Docs are at https://pygame.org/docs/
+# Type this in the console first - pip3 install pygame
 import pygame
+
 
 # Inititalize pygame
 pygame.init() # initialize pygame
@@ -12,6 +14,7 @@ pygame.init() # initialize pygame
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 800
 SCREEN_TITLE = "Froggish"
+
 
 #Add colors on screen (black/white)
 WHITE_COLOR = (255, 255, 255) 
