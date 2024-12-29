@@ -155,9 +155,9 @@ class EnemyCharacter(GameObjects):
     # Create move method - must know screen boundaries (width) - pass max_width as parameter
     def move (self, max_width):
         if self.x_pos <= 20: # stops 20 pixels before left-hand side of screen
-            self.SPEED = abs(self.speed) # takes absolute value of speed - makes it positive - moves to right
+            self.SPEED = abs(self.SPEED) # takes absolute value of SPEED - makes it positive - moves to right
         elif self.x_pos > max_width - (20 + self.width): # stop 20 pixels less than 800 also accounting for the enemy character's width
-            self.SPEED = -abs(self.speed) #negates absolute value - moves it left
+            self.SPEED = -abs(self.SPEED) #negates absolute value - moves it left
         # This moves the enemy character
         self.x_pos += self.SPEED 
 
