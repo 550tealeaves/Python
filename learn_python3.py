@@ -28,6 +28,7 @@ my_eyes = 'Blue'
 my_teeth = 'White'
 my_hair = "Brown"
 
+
 print(f"Let's talk about {my_name}.") #Let's talk about Zed A. Shaw
 print(f"He's {my_height} inches tall.") #He's 74in tall
 print(f"He's {my_weight} pounds.") #He's 180lbs
