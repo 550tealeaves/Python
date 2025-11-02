@@ -28,13 +28,13 @@ not (True and True) #False
 not (False and True) #True
 not (False and False) #True
 
-# !=
+# != (does not equal)
 1!=0 #True
 1!=1 #False
 0!=1 #True
 0!=0 #False
 
-# ==
+# == (exactly equal)
 1==0 #False
 1==1 #True
 0==1 #False
