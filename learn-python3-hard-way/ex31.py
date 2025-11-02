@@ -15,7 +15,7 @@ if door == "1":
   bear = input("> ")
 # Options for the bear
   if bear == "1":
-    print("The bear eviscerates you, and your girlfriend mounrs your untimely demise")
+    print("The bear eviscerates you, and your girlfriend mourns your untimely demise")
   elif bear == "2":
     print("The bear only chomps on your legs, sparing your entrails, and leaves you crippled and broken.")
   else:
@@ -24,7 +24,7 @@ if door == "1":
 
 # if door #2
 elif door == "2":
-    print("You stare into the endless abuss at Cthulu's retina.")
+    print("You stare into the endless abyss at Cthulhu's retina.")
     print("1. Blueberries.")
     print("2. Yellow jacket clothespins.")
     print("3. Understanding revolvers yelling melodies>")
