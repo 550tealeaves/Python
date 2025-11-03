@@ -4,14 +4,16 @@
 # list = container of things,separated by comma, organized in order
 ## **Common to find functions w/ if-statements that have lists w/ lists (nested) - have to break it down to understand it
 
-hairs = ['brown', 'blond', 'red']
-eyes = ['hazel', 'blue', 'green']
-weights = [1, 2, 3, 4]
 
 # Lists
 the_count = [1, 2, 3, 4, 5]
 fruits = ['apples', 'oranges', 'pears', 'apricots']
 change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
+hairs = ['brown', 'blond', 'red']
+eyes = ['hazel', 'blue', 'green']
+weights = [1, 2, 3, 4]
+
+
 
 #This 1st type of for-loop goes through a list
 for number in the_count: #the_count = list
@@ -30,6 +32,30 @@ for fruit in fruits: #fruits = list
 # A fruit of type: oranges
 # A fruit of type: pears
 # A fruit of type: apricots
+
+
+for hair in hairs:
+  print(f"The advertisement requests a middle aged woman, short woman with {hair} hair.")
+
+# The advertisement requests a middle aged woman, short woman with brown hair.
+# The advertisement requests a middle aged woman, short woman with blond hair.
+# The advertisement requests a middle aged woman, short woman with red hair.
+
+
+for eye in eyes:
+  print(f"The police issued a warrant for a tall, slender man with {eye} eyes. Stay alert!")
+
+# The police issued a warrant for a tall, slender man with hazel eyes. Stay alert!
+# The police issued a warrant for a tall, slender man with blue eyes. Stay alert!
+# The police issued a warrant for a tall, slender man with green eyes. Stay alert!
+
+for pound in weights:
+  print(f"It is amazing that newborn kittens can be born at {pound} pounds.")
+
+# It is amazing that newborn kittens can be born at 1 pounds.
+# It is amazing that newborn kittens can be born at 2 pounds.
+# It is amazing that newborn kittens can be born at 3 pounds.
+# It is amazing that newborn kittens can be born at 4 pounds.
 
 
 # **MIXED LISTS**
