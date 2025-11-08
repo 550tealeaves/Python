@@ -72,6 +72,3 @@ def start():
     dead("You stumble around the room until you starve.")
 
 start()
-
-def dead(why):
-  print(why, "Good job!")
